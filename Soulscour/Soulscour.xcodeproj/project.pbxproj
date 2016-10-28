@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1C04431DC3540E003B8A65 /* collec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04421DC3540E003B8A65 /* collec.png */; settings = {ASSET_TAGS = (); }; };
+		3F1C04471DC355D0003B8A65 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04461DC355D0003B8A65 /* refresh.png */; settings = {ASSET_TAGS = (); }; };
+		3F1C044A1DC357A4003B8A65 /* nocollec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04481DC357A4003B8A65 /* nocollec.png */; settings = {ASSET_TAGS = (); }; };
+		3F1C044B1DC357A4003B8A65 /* colleced.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04491DC357A4003B8A65 /* colleced.png */; settings = {ASSET_TAGS = (); }; };
+		3F1C044E1DC36C80003B8A65 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F7CC4371DC206A30041605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4361DC206A30041605C /* main.m */; };
 		3F7CC43A1DC206A30041605C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4391DC206A30041605C /* AppDelegate.m */; };
 		3F7CC43C1DC206A30041605C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC43B1DC206A30041605C /* Assets.xcassets */; };
@@ -27,7 +32,6 @@
 		3F7CC4841DC21F380041605C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7CC4831DC21F380041605C /* libsqlite3.tbd */; };
 		3F7CC4881DC221C70041605C /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4861DC221C70041605C /* OtherViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F7CC4891DC221C70041605C /* OtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4871DC221C70041605C /* OtherViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		3F7CC4961DC235730041605C /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4951DC235730041605C /* Tag.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1C04421DC3540E003B8A65 /* collec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collec.png; sourceTree = "<group>"; };
+		3F1C04461DC355D0003B8A65 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		3F1C04481DC357A4003B8A65 /* nocollec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocollec.png; sourceTree = "<group>"; };
+		3F1C04491DC357A4003B8A65 /* colleced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colleced.png; sourceTree = "<group>"; };
+		3F1C044C1DC36C80003B8A65 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		3F7CC4321DC206A30041605C /* Soulscour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulscour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7CC4361DC206A30041605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F7CC4381DC206A30041605C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,8 +95,6 @@
 		3F7CC4851DC221C70041605C /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
 		3F7CC4861DC221C70041605C /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		3F7CC4871DC221C70041605C /* OtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherViewController.xib; sourceTree = "<group>"; };
-		3F7CC4941DC235730041605C /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
-		3F7CC4951DC235730041605C /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +155,6 @@
 				3F7CC4351DC206A30041605C /* Supporting Files */,
 				3F7CC4621DC21E2E0041605C /* Poe */,
 				3F7CC48A1DC221CD0041605C /* Other */,
-				3F7CC4941DC235730041605C /* Tag.h */,
-				3F7CC4951DC235730041605C /* Tag.m */,
 			);
 			path = Soulscour;
 			sourceTree = "<group>";
@@ -182,6 +188,12 @@
 		3F7CC4621DC21E2E0041605C /* Poe */ = {
 			isa = PBXGroup;
 			children = (
+				3F1C044C1DC36C80003B8A65 /* CollectionViewController.h */,
+				3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */,
+				3F1C04461DC355D0003B8A65 /* refresh.png */,
+				3F1C04421DC3540E003B8A65 /* collec.png */,
+				3F1C04481DC357A4003B8A65 /* nocollec.png */,
+				3F1C04491DC357A4003B8A65 /* colleced.png */,
 				3F7CC4631DC21E4C0041605C /* 未收藏.png */,
 				3F7CC4641DC21E4C0041605C /* 已收藏.png */,
 				3F7CC4651DC21E4C0041605C /* fmdb */,
@@ -332,10 +344,14 @@
 			files = (
 				3F7CC4821DC21E4C0041605C /* PoeViewController.xib in Resources */,
 				3F7CC4891DC221C70041605C /* OtherViewController.xib in Resources */,
+				3F1C044B1DC357A4003B8A65 /* colleced.png in Resources */,
 				3F7CC4781DC21E4C0041605C /* 未收藏.png in Resources */,
 				3F7CC4791DC21E4C0041605C /* 已收藏.png in Resources */,
 				3F7CC43C1DC206A30041605C /* Assets.xcassets in Resources */,
+				3F1C04471DC355D0003B8A65 /* refresh.png in Resources */,
 				3F7CC43F1DC206A30041605C /* LaunchScreen.storyboard in Resources */,
+				3F1C04431DC3540E003B8A65 /* collec.png in Resources */,
+				3F1C044A1DC357A4003B8A65 /* nocollec.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +384,8 @@
 				3F7CC4801DC21E4C0041605C /* PoeTool.m in Sources */,
 				3F7CC47E1DC21E4C0041605C /* FMResultSet.m in Sources */,
 				3F7CC47C1DC21E4C0041605C /* FMDatabasePool.m in Sources */,
-				3F7CC4961DC235730041605C /* Tag.m in Sources */,
 				3F7CC4371DC206A30041605C /* main.m in Sources */,
+				3F1C044E1DC36C80003B8A65 /* CollectionViewController.m in Sources */,
 				3F7CC47B1DC21E4C0041605C /* FMDatabaseAdditions.m in Sources */,
 				3F7CC47D1DC21E4C0041605C /* FMDatabaseQueue.m in Sources */,
 			);

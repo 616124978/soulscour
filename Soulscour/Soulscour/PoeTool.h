@@ -21,4 +21,7 @@
 //查询
 +(NSArray *)searchPoe:(NSString *)poeID;
 
+//获取全部
++(NSArray *)searchAllpoe;
+
 @end

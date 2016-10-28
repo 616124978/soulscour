@@ -32,12 +32,12 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpG-LK-6io">
-                    <rect key="frame" x="335" y="60" width="30" height="30"/>
+                    <rect key="frame" x="335" y="50" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="J3k-is-QAi"/>
-                        <constraint firstAttribute="width" constant="30" id="mYh-7x-pZ0"/>
+                        <constraint firstAttribute="height" constant="20" id="J3k-is-QAi"/>
+                        <constraint firstAttribute="width" constant="20" id="mYh-7x-pZ0"/>
                     </constraints>
-                    <state key="normal" backgroundImage="未收藏.png"/>
+                    <state key="normal" backgroundImage="noCollec.png"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR8-3G-dMX">
                     <rect key="frame" x="50" y="60" width="275" height="20"/>
@@ -52,10 +52,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Amq-Az-Ksx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1S1-CC-h4J"/>
-                <constraint firstAttribute="trailing" secondItem="TpG-LK-6io" secondAttribute="trailing" constant="10" id="Bym-GF-5cZ"/>
+                <constraint firstAttribute="trailing" secondItem="TpG-LK-6io" secondAttribute="trailing" constant="20" id="Bym-GF-5cZ"/>
                 <constraint firstAttribute="bottom" secondItem="Amq-Az-Ksx" secondAttribute="bottom" constant="69" id="CYH-zu-2TK"/>
                 <constraint firstItem="TGg-gu-ePW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="DtW-Yf-NdS"/>
-                <constraint firstItem="TpG-LK-6io" firstAttribute="top" secondItem="TGg-gu-ePW" secondAttribute="bottom" constant="10" id="IOh-zI-8Q0"/>
+                <constraint firstItem="TpG-LK-6io" firstAttribute="top" secondItem="TGg-gu-ePW" secondAttribute="bottom" id="IOh-zI-8Q0"/>
                 <constraint firstItem="Amq-Az-Ksx" firstAttribute="top" secondItem="bR8-3G-dMX" secondAttribute="bottom" constant="26" id="Jyi-XJ-1GD"/>
                 <constraint firstItem="bR8-3G-dMX" firstAttribute="top" secondItem="TGg-gu-ePW" secondAttribute="bottom" constant="10" id="OY5-we-cyl"/>
                 <constraint firstAttribute="trailing" secondItem="Amq-Az-Ksx" secondAttribute="trailing" constant="20" id="SaS-SO-H4X"/>
@@ -72,6 +72,6 @@
         </view>
     </objects>
     <resources>
-        <image name="未收藏.png" width="32" height="32"/>
+        <image name="noCollec.png" width="16" height="16"/>
     </resources>
 </document>

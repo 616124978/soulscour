@@ -9,7 +9,7 @@
 #import "PoeViewController.h"
 #import "PoeModel.h"
 #import "PoeTool.h"
-#import "Tag.h"
+#import "CollectionViewController.h"
 #import <stdlib.h>
 
 
@@ -26,6 +26,8 @@
 @property (nonatomic, strong) PoeModel *model;
 
 @property (nonatomic, strong) NSArray *dataArray;
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, assign) BOOL isCollected;
 
@@ -64,12 +66,12 @@
                 }
                 NSArray *array = [PoeTool searchPoe:self.model.poe_id];
                 if (array.count == 0) {
-                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"未收藏.png"] forState:UIControlStateNormal];
+                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"nocollec.png"] forState:UIControlStateNormal];
                     self.isCollected = NO;
                 }
                 else
                 {
-                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"已收藏.png"] forState:UIControlStateNormal];
+                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"colleced.png"] forState:UIControlStateNormal];
                     self.isCollected = YES;
                 }
                 self.tableView.contentOffset = CGPointMake(0,0);
@@ -94,17 +96,24 @@
 }
 
 -(void)initView {
+    self.title = @"诗";
     
     self.dataArray = [[NSArray alloc] init];
     
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshAction)];
+    UIImage *freshIcon=[UIImage imageNamed:@"refresh.png"];
+    freshIcon=[freshIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightItem1=[[UIBarButtonItem alloc] initWithImage:freshIcon style:UIBarButtonItemStyleDone target:self action:@selector(refreshAction)];
+    UIImage *collIcon=[UIImage imageNamed:@"collec.png"];
+    collIcon=[collIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightItem2=[[UIBarButtonItem alloc] initWithImage:collIcon style:UIBarButtonItemStyleDone target:self action:@selector(pushAction)];
+    self.navigationItem.rightBarButtonItems = @[rightItem2,rightItem1];
     
     self.titleT.textColor = [UIColor colorWithWhite:0.550 alpha:1.000];
     self.authorT.textColor = [UIColor colorWithWhite:0.550 alpha:1.000];
     
-    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"未收藏.png"] forState:UIControlStateNormal];
+
     [self.collBtn addTarget:self action:@selector(collAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.delegate = self;
@@ -117,7 +126,7 @@
 
 -(void)initTimer {
     
-    [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
     
 }
 
@@ -129,18 +138,19 @@
     //将这个控件加到父容器中。
     [self.view addSubview:self.indicator];
     
-    self.indicator.color = [UIColor redColor];
+    self.indicator.color = [UIColor lightGrayColor];
 }
 
 - (void)alertView
 {
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告" message:@"你的操作时非法的，您要继续吗" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-//    alert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
-//    [alert show];
     UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"提示" message:@"请求超时，请点击刷新按钮" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alter addAction:ok];
     [self presentViewController:alter animated:YES completion:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.timer setFireDate:[NSDate distantPast]];
 }
 
 - (void)viewDidLoad {
@@ -168,9 +178,9 @@
         cell.textLabel.textColor = [UIColor colorWithWhite:0.550 alpha:1.000];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.numberOfLines = 0;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else cell.textLabel.text = nil;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -211,17 +221,22 @@
     
     if (!self.isCollected) {
         [PoeTool addPoe:self.model];
-        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"已收藏.png"] forState:UIControlStateNormal];
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"colleced.png"] forState:UIControlStateNormal];
         self.isCollected = YES;
     }
     else
     {
         [PoeTool deletePoe:self.model];
-        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"未收藏.png"] forState:UIControlStateNormal];
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"nocollec.png"] forState:UIControlStateNormal];
         self.isCollected = NO;
     }
 }
 
+-(void)pushAction {
+    [self.timer setFireDate:[NSDate distantFuture]];
+    CollectionViewController *collVC = [[CollectionViewController alloc] init];
+    [self.navigationController pushViewController:collVC animated:YES];
+}
 /*
 #pragma mark - Navigation
 

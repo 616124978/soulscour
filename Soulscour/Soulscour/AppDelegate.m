@@ -61,7 +61,7 @@
     
     self.window.rootViewController = [self createTabbarController];
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.961 green:0.972 blue:1.000 alpha:1.000]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.389 green:0.603 blue:1.000 alpha:1.000]];
     
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.950 green:0.945 blue:1.000 alpha:1.000]];
     

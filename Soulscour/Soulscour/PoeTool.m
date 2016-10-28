@@ -74,4 +74,30 @@ NSString *_path;
     return array;
 }
 
++(NSArray *)searchAllpoe {
+    [_db open];
+    
+    //返回值是一个结果集
+    FMResultSet *resultSet = [_db executeQuery:@"select * from t_poe;"];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    while ([resultSet next]) {
+        NSString *response = [resultSet objectForColumnName:@"response"];
+        NSString *poe_id = [resultSet objectForColumnName:@"poe_id"];
+        NSString *title = [resultSet objectForColumnName:@"title"];
+        NSString *artist = [resultSet objectForColumnName:@"artist"];
+        NSString *content = [resultSet objectForColumnName:@"content"];
+        
+        PoeModel *poe = [[PoeModel alloc] init];
+        poe.response = response;
+        poe.poe_id = poe_id;
+        poe.title = title;
+        poe.artist = artist;
+        poe.content = content;
+        
+        [array addObject:poe];
+    }
+    [_db close];
+    return array;
+}
+
 @end
