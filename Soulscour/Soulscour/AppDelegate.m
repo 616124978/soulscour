@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "PoeViewController.h"
 #import "OtherViewController.h"
-#import "BezViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -41,13 +41,10 @@
     OtherViewController *otherVC = (OtherViewController *)[self createVCWithClass:[OtherViewController class] title:@"其他" normalImage:@"未收藏.png" selectedImage:@"已收藏.png"];
     UINavigationController *otherNav=[[UINavigationController alloc] initWithRootViewController:otherVC];
     
-    //美图美文
-    BezViewController *bezVC=(BezViewController *)[self createVCWithClass:[BezViewController class] title:@"美图文" normalImage:@"书本.png" selectedImage:@"书本2.png"];
-    UINavigationController *bezNav=[[UINavigationController alloc]initWithRootViewController:bezVC];
     
     UITabBarController *tabbarVC=[[UITabBarController alloc] init];
     
-    tabbarVC.viewControllers=@[poeNav,bezNav,otherNav];
+    tabbarVC.viewControllers=@[poeNav,otherNav];
     
     tabbarVC.selectedIndex=2;
     
