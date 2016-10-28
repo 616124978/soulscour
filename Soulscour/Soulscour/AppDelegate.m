@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "PoeViewController.h"
 #import "OtherViewController.h"
-
+#import "BeaViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -40,13 +40,15 @@
     
     OtherViewController *otherVC = (OtherViewController *)[self createVCWithClass:[OtherViewController class] title:@"其他" normalImage:@"未收藏.png" selectedImage:@"已收藏.png"];
     UINavigationController *otherNav=[[UINavigationController alloc] initWithRootViewController:otherVC];
-    
+    //美图美文
+    BeaViewController *beaVC=(BeaViewController *)[self createVCWithClass:[BeaViewController class] title:@"美图文" normalImage:@"书本.png" selectedImage:@"书本2.png"];
+    UINavigationController *beaNav=[[UINavigationController alloc]initWithRootViewController:beaVC];
     
     UITabBarController *tabbarVC=[[UITabBarController alloc] init];
     
-    tabbarVC.viewControllers=@[poeNav,otherNav];
+    tabbarVC.viewControllers=@[beaNav,poeNav,otherNav];
     
-    tabbarVC.selectedIndex=2;
+    tabbarVC.selectedIndex=0;
     
     tabbarVC.tabBar.translucent=NO;
     
