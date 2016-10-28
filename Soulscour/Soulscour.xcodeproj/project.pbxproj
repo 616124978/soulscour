@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F7CC4371DC206A30041605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4361DC206A30041605C /* main.m */; };
+		3F7CC43A1DC206A30041605C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4391DC206A30041605C /* AppDelegate.m */; };
+		3F7CC43C1DC206A30041605C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC43B1DC206A30041605C /* Assets.xcassets */; };
+		3F7CC43F1DC206A30041605C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC43D1DC206A30041605C /* LaunchScreen.storyboard */; };
+		3F7CC44A1DC206A30041605C /* SoulscourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4491DC206A30041605C /* SoulscourTests.m */; };
+		3F7CC4551DC206A30041605C /* SoulscourUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4541DC206A30041605C /* SoulscourUITests.m */; };
+		3F7CC4781DC21E4C0041605C /* 未收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4631DC21E4C0041605C /* 未收藏.png */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4791DC21E4C0041605C /* 已收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4641DC21E4C0041605C /* 已收藏.png */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47A1DC21E4C0041605C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4671DC21E4C0041605C /* FMDatabase.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47B1DC21E4C0041605C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4691DC21E4C0041605C /* FMDatabaseAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47C1DC21E4C0041605C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC46B1DC21E4C0041605C /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47D1DC21E4C0041605C /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC46D1DC21E4C0041605C /* FMDatabaseQueue.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47E1DC21E4C0041605C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4701DC21E4C0041605C /* FMResultSet.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC47F1DC21E4C0041605C /* PoeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4721DC21E4C0041605C /* PoeModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4801DC21E4C0041605C /* PoeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4741DC21E4C0041605C /* PoeTool.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4811DC21E4C0041605C /* PoeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4761DC21E4C0041605C /* PoeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4821DC21E4C0041605C /* PoeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4771DC21E4C0041605C /* PoeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4841DC21F380041605C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7CC4831DC21F380041605C /* libsqlite3.tbd */; };
+		3F7CC4881DC221C70041605C /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4861DC221C70041605C /* OtherViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4891DC221C70041605C /* OtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4871DC221C70041605C /* OtherViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3F7CC4961DC235730041605C /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4951DC235730041605C /* Tag.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F7CC4461DC206A30041605C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F7CC42A1DC206A30041605C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F7CC4311DC206A30041605C;
+			remoteInfo = Soulscour;
+		};
+		3F7CC4511DC206A30041605C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F7CC42A1DC206A30041605C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F7CC4311DC206A30041605C;
+			remoteInfo = Soulscour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F7CC4321DC206A30041605C /* Soulscour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulscour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7CC4361DC206A30041605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F7CC4381DC206A30041605C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F7CC4391DC206A30041605C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F7CC43B1DC206A30041605C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F7CC43E1DC206A30041605C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F7CC4401DC206A30041605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7CC4451DC206A30041605C /* SoulscourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulscourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7CC4491DC206A30041605C /* SoulscourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoulscourTests.m; sourceTree = "<group>"; };
+		3F7CC44B1DC206A30041605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7CC4501DC206A30041605C /* SoulscourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulscourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7CC4541DC206A30041605C /* SoulscourUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoulscourUITests.m; sourceTree = "<group>"; };
+		3F7CC4561DC206A30041605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7CC4631DC21E4C0041605C /* 未收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未收藏.png"; sourceTree = "<group>"; };
+		3F7CC4641DC21E4C0041605C /* 已收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已收藏.png"; sourceTree = "<group>"; };
+		3F7CC4661DC21E4C0041605C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		3F7CC4671DC21E4C0041605C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		3F7CC4681DC21E4C0041605C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		3F7CC4691DC21E4C0041605C /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		3F7CC46A1DC21E4C0041605C /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		3F7CC46B1DC21E4C0041605C /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		3F7CC46C1DC21E4C0041605C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		3F7CC46D1DC21E4C0041605C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		3F7CC46E1DC21E4C0041605C /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		3F7CC46F1DC21E4C0041605C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		3F7CC4701DC21E4C0041605C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		3F7CC4711DC21E4C0041605C /* PoeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeModel.h; sourceTree = "<group>"; };
+		3F7CC4721DC21E4C0041605C /* PoeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeModel.m; sourceTree = "<group>"; };
+		3F7CC4731DC21E4C0041605C /* PoeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeTool.h; sourceTree = "<group>"; };
+		3F7CC4741DC21E4C0041605C /* PoeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeTool.m; sourceTree = "<group>"; };
+		3F7CC4751DC21E4C0041605C /* PoeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeViewController.h; sourceTree = "<group>"; };
+		3F7CC4761DC21E4C0041605C /* PoeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeViewController.m; sourceTree = "<group>"; };
+		3F7CC4771DC21E4C0041605C /* PoeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoeViewController.xib; sourceTree = "<group>"; };
+		3F7CC4831DC21F380041605C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3F7CC4851DC221C70041605C /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		3F7CC4861DC221C70041605C /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		3F7CC4871DC221C70041605C /* OtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherViewController.xib; sourceTree = "<group>"; };
+		3F7CC4941DC235730041605C /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		3F7CC4951DC235730041605C /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F7CC42F1DC206A30041605C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CC4841DC21F380041605C /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC4421DC206A30041605C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC44D1DC206A30041605C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F7CC4291DC206A30041605C = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4831DC21F380041605C /* libsqlite3.tbd */,
+				3F7CC4341DC206A30041605C /* Soulscour */,
+				3F7CC4481DC206A30041605C /* SoulscourTests */,
+				3F7CC4531DC206A30041605C /* SoulscourUITests */,
+				3F7CC4331DC206A30041605C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F7CC4331DC206A30041605C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4321DC206A30041605C /* Soulscour.app */,
+				3F7CC4451DC206A30041605C /* SoulscourTests.xctest */,
+				3F7CC4501DC206A30041605C /* SoulscourUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F7CC4341DC206A30041605C /* Soulscour */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4381DC206A30041605C /* AppDelegate.h */,
+				3F7CC4391DC206A30041605C /* AppDelegate.m */,
+				3F7CC43B1DC206A30041605C /* Assets.xcassets */,
+				3F7CC43D1DC206A30041605C /* LaunchScreen.storyboard */,
+				3F7CC4401DC206A30041605C /* Info.plist */,
+				3F7CC4351DC206A30041605C /* Supporting Files */,
+				3F7CC4621DC21E2E0041605C /* Poe */,
+				3F7CC48A1DC221CD0041605C /* Other */,
+				3F7CC4941DC235730041605C /* Tag.h */,
+				3F7CC4951DC235730041605C /* Tag.m */,
+			);
+			path = Soulscour;
+			sourceTree = "<group>";
+		};
+		3F7CC4351DC206A30041605C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4361DC206A30041605C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F7CC4481DC206A30041605C /* SoulscourTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4491DC206A30041605C /* SoulscourTests.m */,
+				3F7CC44B1DC206A30041605C /* Info.plist */,
+			);
+			path = SoulscourTests;
+			sourceTree = "<group>";
+		};
+		3F7CC4531DC206A30041605C /* SoulscourUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4541DC206A30041605C /* SoulscourUITests.m */,
+				3F7CC4561DC206A30041605C /* Info.plist */,
+			);
+			path = SoulscourUITests;
+			sourceTree = "<group>";
+		};
+		3F7CC4621DC21E2E0041605C /* Poe */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4631DC21E4C0041605C /* 未收藏.png */,
+				3F7CC4641DC21E4C0041605C /* 已收藏.png */,
+				3F7CC4651DC21E4C0041605C /* fmdb */,
+				3F7CC4711DC21E4C0041605C /* PoeModel.h */,
+				3F7CC4721DC21E4C0041605C /* PoeModel.m */,
+				3F7CC4731DC21E4C0041605C /* PoeTool.h */,
+				3F7CC4741DC21E4C0041605C /* PoeTool.m */,
+				3F7CC4751DC21E4C0041605C /* PoeViewController.h */,
+				3F7CC4761DC21E4C0041605C /* PoeViewController.m */,
+				3F7CC4771DC21E4C0041605C /* PoeViewController.xib */,
+			);
+			name = Poe;
+			sourceTree = "<group>";
+		};
+		3F7CC4651DC21E4C0041605C /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4661DC21E4C0041605C /* FMDatabase.h */,
+				3F7CC4671DC21E4C0041605C /* FMDatabase.m */,
+				3F7CC4681DC21E4C0041605C /* FMDatabaseAdditions.h */,
+				3F7CC4691DC21E4C0041605C /* FMDatabaseAdditions.m */,
+				3F7CC46A1DC21E4C0041605C /* FMDatabasePool.h */,
+				3F7CC46B1DC21E4C0041605C /* FMDatabasePool.m */,
+				3F7CC46C1DC21E4C0041605C /* FMDatabaseQueue.h */,
+				3F7CC46D1DC21E4C0041605C /* FMDatabaseQueue.m */,
+				3F7CC46E1DC21E4C0041605C /* FMDB.h */,
+				3F7CC46F1DC21E4C0041605C /* FMResultSet.h */,
+				3F7CC4701DC21E4C0041605C /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		3F7CC48A1DC221CD0041605C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CC4851DC221C70041605C /* OtherViewController.h */,
+				3F7CC4861DC221C70041605C /* OtherViewController.m */,
+				3F7CC4871DC221C70041605C /* OtherViewController.xib */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F7CC4311DC206A30041605C /* Soulscour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F7CC4591DC206A30041605C /* Build configuration list for PBXNativeTarget "Soulscour" */;
+			buildPhases = (
+				3F7CC42E1DC206A30041605C /* Sources */,
+				3F7CC42F1DC206A30041605C /* Frameworks */,
+				3F7CC4301DC206A30041605C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soulscour;
+			productName = Soulscour;
+			productReference = 3F7CC4321DC206A30041605C /* Soulscour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F7CC4441DC206A30041605C /* SoulscourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F7CC45C1DC206A30041605C /* Build configuration list for PBXNativeTarget "SoulscourTests" */;
+			buildPhases = (
+				3F7CC4411DC206A30041605C /* Sources */,
+				3F7CC4421DC206A30041605C /* Frameworks */,
+				3F7CC4431DC206A30041605C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F7CC4471DC206A30041605C /* PBXTargetDependency */,
+			);
+			name = SoulscourTests;
+			productName = SoulscourTests;
+			productReference = 3F7CC4451DC206A30041605C /* SoulscourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F7CC44F1DC206A30041605C /* SoulscourUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F7CC45F1DC206A30041605C /* Build configuration list for PBXNativeTarget "SoulscourUITests" */;
+			buildPhases = (
+				3F7CC44C1DC206A30041605C /* Sources */,
+				3F7CC44D1DC206A30041605C /* Frameworks */,
+				3F7CC44E1DC206A30041605C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F7CC4521DC206A30041605C /* PBXTargetDependency */,
+			);
+			name = SoulscourUITests;
+			productName = SoulscourUITests;
+			productReference = 3F7CC4501DC206A30041605C /* SoulscourUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F7CC42A1DC206A30041605C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = lanou;
+				TargetAttributes = {
+					3F7CC4311DC206A30041605C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = K69T45G5TL;
+					};
+					3F7CC4441DC206A30041605C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = K69T45G5TL;
+						TestTargetID = 3F7CC4311DC206A30041605C;
+					};
+					3F7CC44F1DC206A30041605C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = K69T45G5TL;
+						TestTargetID = 3F7CC4311DC206A30041605C;
+					};
+				};
+			};
+			buildConfigurationList = 3F7CC42D1DC206A30041605C /* Build configuration list for PBXProject "Soulscour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F7CC4291DC206A30041605C;
+			productRefGroup = 3F7CC4331DC206A30041605C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F7CC4311DC206A30041605C /* Soulscour */,
+				3F7CC4441DC206A30041605C /* SoulscourTests */,
+				3F7CC44F1DC206A30041605C /* SoulscourUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F7CC4301DC206A30041605C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CC4821DC21E4C0041605C /* PoeViewController.xib in Resources */,
+				3F7CC4891DC221C70041605C /* OtherViewController.xib in Resources */,
+				3F7CC4781DC21E4C0041605C /* 未收藏.png in Resources */,
+				3F7CC4791DC21E4C0041605C /* 已收藏.png in Resources */,
+				3F7CC43C1DC206A30041605C /* Assets.xcassets in Resources */,
+				3F7CC43F1DC206A30041605C /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC4431DC206A30041605C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC44E1DC206A30041605C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F7CC42E1DC206A30041605C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CC47A1DC21E4C0041605C /* FMDatabase.m in Sources */,
+				3F7CC43A1DC206A30041605C /* AppDelegate.m in Sources */,
+				3F7CC4881DC221C70041605C /* OtherViewController.m in Sources */,
+				3F7CC47F1DC21E4C0041605C /* PoeModel.m in Sources */,
+				3F7CC4811DC21E4C0041605C /* PoeViewController.m in Sources */,
+				3F7CC4801DC21E4C0041605C /* PoeTool.m in Sources */,
+				3F7CC47E1DC21E4C0041605C /* FMResultSet.m in Sources */,
+				3F7CC47C1DC21E4C0041605C /* FMDatabasePool.m in Sources */,
+				3F7CC4961DC235730041605C /* Tag.m in Sources */,
+				3F7CC4371DC206A30041605C /* main.m in Sources */,
+				3F7CC47B1DC21E4C0041605C /* FMDatabaseAdditions.m in Sources */,
+				3F7CC47D1DC21E4C0041605C /* FMDatabaseQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC4411DC206A30041605C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CC44A1DC206A30041605C /* SoulscourTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7CC44C1DC206A30041605C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CC4551DC206A30041605C /* SoulscourUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F7CC4471DC206A30041605C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F7CC4311DC206A30041605C /* Soulscour */;
+			targetProxy = 3F7CC4461DC206A30041605C /* PBXContainerItemProxy */;
+		};
+		3F7CC4521DC206A30041605C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F7CC4311DC206A30041605C /* Soulscour */;
+			targetProxy = 3F7CC4511DC206A30041605C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F7CC43D1DC206A30041605C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F7CC43E1DC206A30041605C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F7CC4571DC206A30041605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F7CC4581DC206A30041605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F7CC45A1DC206A30041605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulscour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lf.Soulscour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F7CC45B1DC206A30041605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulscour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lf.Soulscour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3F7CC45D1DC206A30041605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SoulscourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llll.SoulscourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulscour.app/Soulscour";
+			};
+			name = Debug;
+		};
+		3F7CC45E1DC206A30041605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SoulscourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llll.SoulscourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulscour.app/Soulscour";
+			};
+			name = Release;
+		};
+		3F7CC4601DC206A30041605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SoulscourUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llll.SoulscourUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Soulscour;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3F7CC4611DC206A30041605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SoulscourUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llll.SoulscourUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Soulscour;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F7CC42D1DC206A30041605C /* Build configuration list for PBXProject "Soulscour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F7CC4571DC206A30041605C /* Debug */,
+				3F7CC4581DC206A30041605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F7CC4591DC206A30041605C /* Build configuration list for PBXNativeTarget "Soulscour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F7CC45A1DC206A30041605C /* Debug */,
+				3F7CC45B1DC206A30041605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F7CC45C1DC206A30041605C /* Build configuration list for PBXNativeTarget "SoulscourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F7CC45D1DC206A30041605C /* Debug */,
+				3F7CC45E1DC206A30041605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F7CC45F1DC206A30041605C /* Build configuration list for PBXNativeTarget "SoulscourUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F7CC4601DC206A30041605C /* Debug */,
+				3F7CC4611DC206A30041605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F7CC42A1DC206A30041605C /* Project object */;
+}
