@@ -10,4 +10,6 @@
 
 @interface PoeViewController : UIViewController
 
+@property (nonatomic, assign) NSString *collecedPoe_id;
+
 @end

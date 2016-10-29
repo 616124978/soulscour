@@ -35,7 +35,7 @@
 
 -(UITabBarController *)createTabbarController
 {
-    PoeViewController *poeVC=(PoeViewController *)[self createVCWithClass:[PoeViewController class] title:@"诗歌" normalImage:@"未收藏.png" selectedImage:@"已收藏.png"];
+    PoeViewController *poeVC=(PoeViewController *)[self createVCWithClass:[PoeViewController class] title:@"诗歌" normalImage:@"poe.png" selectedImage:@"poe1.png"];
     UINavigationController *poeNav=[[UINavigationController alloc] initWithRootViewController:poeVC];
     
     OtherViewController *otherVC = (OtherViewController *)[self createVCWithClass:[OtherViewController class] title:@"其他" normalImage:@"未收藏.png" selectedImage:@"已收藏.png"];

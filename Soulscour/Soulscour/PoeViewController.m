@@ -12,6 +12,8 @@
 #import "CollectionViewController.h"
 #import <stdlib.h>
 
+#define KSCHeight [UIScreen mainScreen].bounds.size.height
+#define KSCWidth  [UIScreen mainScreen].bounds.size.width
 
 @interface PoeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -33,66 +35,114 @@
 
 @property (nonatomic, strong) UIActivityIndicatorView *indicator;
 
+@property (nonatomic, strong) NSURLSessionDataTask *task;
+
+@property (nonatomic, strong) UIBarButtonItem *rightItem1;
+
+@property (nonatomic, strong) UIBarButtonItem *rightItem2;
+
 @end
 
 @implementation PoeViewController
 
 -(void)loadData {
     
+    self.task =nil;
+    [self.indicator setHidesWhenStopped:NO];
     [self.indicator startAnimating];
     
     self.model = [[PoeModel alloc] init];
     
-    int arc = arc4random()%(92-1+1)+1;
-
-    NSLog(@"%d",arc);
-    
-    NSString *str=[NSString stringWithFormat:@"http://bubo.in/poe/poem?s=%d",arc];
-    
-    //生成Url
-    NSURL *url = [NSURL URLWithString:str];
-    
-    //创建会话
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    //创建任务
-    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data) {
+    if (self.collecedPoe_id == nil) {
+        
+        [self.rightItem2 setImage:[UIImage imageNamed:@"Ncollec.png"]];
+        [self.rightItem2 setEnabled:NO];
+        [self.collBtn setEnabled:NO];
+        
+        int arc = arc4random()%(92-1+1)+1;
+        
+        NSLog(@"%d",arc);
+        
+        NSString *str=[NSString stringWithFormat:@"http://bubo.in/poe/poem?s=%d",arc];
+        
+        //生成Url
+        NSURL *url = [NSURL URLWithString:str];
+        
+        //创建会话
+        NSURLSession *session = [NSURLSession sharedSession];
+        
+        //创建任务
+        self.task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (data) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+                    for (NSDictionary *dic in arr) {
+                        [self.model setValuesForKeysWithDictionary:dic];
+                        self.dataArray = [self.model.content componentsSeparatedByString:@"|^n|"];
+                    }
+                    NSArray *array = [PoeTool searchPoe:self.model.poe_id];
+                    if (array.count == 0) {
+                        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"noCol.png"] forState:UIControlStateNormal];
+                        self.isCollected = NO;
+                    }
+                    else
+                    {
+                        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"coled.png"] forState:UIControlStateNormal];
+                        self.isCollected = YES;
+                    }
+                    self.tableView.contentOffset = CGPointMake(0,0);
+                    [self.tableView reloadData];
+                    self.titleT.text = self.model.title;
+                    self.authorT.text = self.model.artist;
+                    [self.indicator stopAnimating];
+                    [self.indicator setHidesWhenStopped:YES];
+                    
+                });
+            }
+            else {
+                NSLog(@"error = %@",error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self alertView];
+                    NSLog(@"error = %@",error);
+                    
+                });
+                
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-                for (NSDictionary *dic in arr) {
-                    [self.model setValuesForKeysWithDictionary:dic];
-                    self.dataArray = [self.model.content componentsSeparatedByString:@"|^n|"];
-                }
-                NSArray *array = [PoeTool searchPoe:self.model.poe_id];
-                if (array.count == 0) {
-                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"nocollec.png"] forState:UIControlStateNormal];
-                    self.isCollected = NO;
-                }
-                else
-                {
-                    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"colleced.png"] forState:UIControlStateNormal];
-                    self.isCollected = YES;
-                }
-                self.tableView.contentOffset = CGPointMake(0,0);
-                [self.tableView reloadData];
-                self.titleT.text = self.model.title;
-                self.authorT.text = self.model.artist;
-                [self.indicator stopAnimating];
-                [self.indicator setHidesWhenStopped:YES];
-
+                
+                UIImage *collIcon=[UIImage imageNamed:@"collec.png"];
+                collIcon=[collIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+                [self.rightItem2 setImage:collIcon];
+                [self.rightItem2 setEnabled:YES];
+                [self.collBtn setEnabled:YES];
             });
-        }
-        else {
+            
+        }];
+        [self.task resume];
+        
+    }
+    else {
+        
+        UIImage *collIcon=[UIImage imageNamed:@"collec.png"];
+        collIcon=[collIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [self.rightItem2 setImage:collIcon];
+        [self.rightItem2 setEnabled:YES];
+        [self.collBtn setEnabled:YES];
+        
+        NSArray *arr = [PoeTool searchPoe:self.collecedPoe_id];
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"coled.png"] forState:UIControlStateNormal];
+        self.isCollected = YES;
+        self.model = arr[0];
+        self.dataArray = [self.model.content componentsSeparatedByString:@"|^n|"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.tableView.contentOffset = CGPointMake(0,0);
+            [self.tableView reloadData];
+            self.titleT.text = self.model.title;
+            self.authorT.text = self.model.artist;
             [self.indicator stopAnimating];
             [self.indicator setHidesWhenStopped:YES];
-            NSLog(@"error = %@",error);
-            [self alertView];
-        }
-        
-    }];
-    [task resume];
-    
+        });
+    }
 }
 
 -(void)initView {
@@ -104,18 +154,18 @@
     
     UIImage *freshIcon=[UIImage imageNamed:@"refresh.png"];
     freshIcon=[freshIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightItem1=[[UIBarButtonItem alloc] initWithImage:freshIcon style:UIBarButtonItemStyleDone target:self action:@selector(refreshAction)];
+    self.rightItem1=[[UIBarButtonItem alloc] initWithImage:freshIcon style:UIBarButtonItemStyleDone target:self action:@selector(refreshAction)];
     UIImage *collIcon=[UIImage imageNamed:@"collec.png"];
     collIcon=[collIcon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightItem2=[[UIBarButtonItem alloc] initWithImage:collIcon style:UIBarButtonItemStyleDone target:self action:@selector(pushAction)];
-    self.navigationItem.rightBarButtonItems = @[rightItem2,rightItem1];
+    self.rightItem2=[[UIBarButtonItem alloc] initWithImage:collIcon style:UIBarButtonItemStyleDone target:self action:@selector(pushAction)];
+    self.navigationItem.rightBarButtonItems = @[self.rightItem2,self.rightItem1];
     
     self.titleT.textColor = [UIColor colorWithWhite:0.550 alpha:1.000];
+    self.titleT.numberOfLines = 0;
     self.authorT.textColor = [UIColor colorWithWhite:0.550 alpha:1.000];
     
 
     [self.collBtn addTarget:self action:@selector(collAction) forControlEvents:UIControlEventTouchUpInside];
-    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -134,15 +184,16 @@
     
     self.indicator =[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     //设置显示位置
-    self.indicator.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2-100);
+    self.indicator.center = CGPointMake(KSCWidth/2, KSCHeight/2-100);
     //将这个控件加到父容器中。
     [self.view addSubview:self.indicator];
     
     self.indicator.color = [UIColor lightGrayColor];
 }
 
-- (void)alertView
-{
+- (void)alertView {
+    [self.indicator stopAnimating];
+    [self.indicator setHidesWhenStopped:YES];
     UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"提示" message:@"请求超时，请点击刷新按钮" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alter addAction:ok];
@@ -151,6 +202,22 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [self.timer setFireDate:[NSDate distantPast]];
+    if (self.collecedPoe_id != nil) {
+        [self loadData];
+    }
+    else{
+    NSArray *array = [PoeTool searchPoe:self.model.poe_id];
+    if (array.count == 0) {
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"noCol.png"] forState:UIControlStateNormal];
+        self.isCollected = NO;
+    }
+    else
+    {
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"coled.png"] forState:UIControlStateNormal];
+        self.isCollected = YES;
+    }
+    }
+
 }
 
 - (void)viewDidLoad {
@@ -190,12 +257,19 @@
     return 50;
 }
 
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.timer setFireDate:[NSDate distantFuture]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 -(void)refreshAction {
+    self.collecedPoe_id = nil;
+    [self.timer setFireDate:[NSDate distantPast]];
+    [self.collBtn setBackgroundImage:[UIImage imageNamed:@"noCol.png"] forState:UIControlStateNormal];
     self.isCollected = NO;
     self.dataArray = nil;
     self.titleT.text = nil;
@@ -221,20 +295,25 @@
     
     if (!self.isCollected) {
         [PoeTool addPoe:self.model];
-        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"colleced.png"] forState:UIControlStateNormal];
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"coled.png"] forState:UIControlStateNormal];
         self.isCollected = YES;
     }
     else
     {
         [PoeTool deletePoe:self.model];
-        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"nocollec.png"] forState:UIControlStateNormal];
+        [self.collBtn setBackgroundImage:[UIImage imageNamed:@"noCol.png"] forState:UIControlStateNormal];
         self.isCollected = NO;
     }
 }
 
 -(void)pushAction {
+    self.collecedPoe_id = nil;
     [self.timer setFireDate:[NSDate distantFuture]];
     CollectionViewController *collVC = [[CollectionViewController alloc] init];
+    collVC.sendBlock = ^(NSString *collecedPoe_id){
+        __block PoeViewController *weakSelf=self;
+        weakSelf.collecedPoe_id = collecedPoe_id;
+    };
     [self.navigationController pushViewController:collVC animated:YES];
 }
 /*

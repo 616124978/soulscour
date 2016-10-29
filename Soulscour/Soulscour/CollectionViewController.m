@@ -9,6 +9,7 @@
 #import "CollectionViewController.h"
 #import "PoeTool.h"
 #import "PoeModel.h"
+#import "PoeViewController.h"
 
 @interface CollectionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -52,6 +53,41 @@
     cell.textLabel.text = model.title;
     
     return cell;
+}
+
+//自带编辑按钮的响应方法
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    
+    [self.tableView setEditing:editing animated:animated];
+}
+
+//返回指定cell是否处于可编辑状态
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+//返回cell的编辑样式
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //默认为删除
+    return UITableViewCellEditingStyleDelete;
+}
+
+//处理编辑结果
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [PoeTool deletePoe:self.dataArray[indexPath.row]];
+    [self getAllpoe];
+    [self.tableView reloadData];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PoeModel *model = self.dataArray[indexPath.row];
+    self.sendBlock(model.poe_id);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

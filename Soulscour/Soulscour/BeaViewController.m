@@ -55,7 +55,7 @@
 {
     self.indicator=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     //frame
-    self.indicator.center=CGPointMake(kscWidth/2, kscHeight/2);
+    self.indicator.center=CGPointMake(kscWidth/2, kscHeight/2-100);
     
     [self.view addSubview:self.indicator];
     self.indicator.color=[UIColor grayColor];

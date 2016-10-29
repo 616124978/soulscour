@@ -10,4 +10,7 @@
 
 @interface CollectionViewController : UIViewController
 
+
+@property(nonatomic,copy)void (^sendBlock)(NSString *collecedPoe_id);
+
 @end

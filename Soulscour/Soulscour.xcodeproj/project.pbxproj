@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F1C04431DC3540E003B8A65 /* collec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04421DC3540E003B8A65 /* collec.png */; settings = {ASSET_TAGS = (); }; };
 		3F1C04471DC355D0003B8A65 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04461DC355D0003B8A65 /* refresh.png */; settings = {ASSET_TAGS = (); }; };
-		3F1C044A1DC357A4003B8A65 /* nocollec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04481DC357A4003B8A65 /* nocollec.png */; settings = {ASSET_TAGS = (); }; };
-		3F1C044B1DC357A4003B8A65 /* colleced.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C04491DC357A4003B8A65 /* colleced.png */; settings = {ASSET_TAGS = (); }; };
 		3F1C044E1DC36C80003B8A65 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F7CC4371DC206A30041605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4361DC206A30041605C /* main.m */; };
 		3F7CC43A1DC206A30041605C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4391DC206A30041605C /* AppDelegate.m */; };
@@ -18,8 +16,6 @@
 		3F7CC43F1DC206A30041605C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC43D1DC206A30041605C /* LaunchScreen.storyboard */; };
 		3F7CC44A1DC206A30041605C /* SoulscourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4491DC206A30041605C /* SoulscourTests.m */; };
 		3F7CC4551DC206A30041605C /* SoulscourUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4541DC206A30041605C /* SoulscourUITests.m */; };
-		3F7CC4781DC21E4C0041605C /* 未收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4631DC21E4C0041605C /* 未收藏.png */; settings = {ASSET_TAGS = (); }; };
-		3F7CC4791DC21E4C0041605C /* 已收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CC4641DC21E4C0041605C /* 已收藏.png */; settings = {ASSET_TAGS = (); }; };
 		3F7CC47A1DC21E4C0041605C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4671DC21E4C0041605C /* FMDatabase.m */; settings = {ASSET_TAGS = (); }; };
 		3F7CC47B1DC21E4C0041605C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC4691DC21E4C0041605C /* FMDatabaseAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		3F7CC47C1DC21E4C0041605C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CC46B1DC21E4C0041605C /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +51,13 @@
 		3FB940A81DC380E300157FEC /* 书本.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB940A61DC380E300157FEC /* 书本.png */; settings = {ASSET_TAGS = (); }; };
 		3FB940A91DC380E300157FEC /* 书本2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB940A71DC380E300157FEC /* 书本2.png */; settings = {ASSET_TAGS = (); }; };
 		3FB940AC1DC380ED00157FEC /* BeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB940AB1DC380ED00157FEC /* BeaViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3FF907ED1DC4924E00702715 /* coled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907EB1DC4924E00702715 /* coled.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907EE1DC4924E00702715 /* noCol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907EC1DC4924E00702715 /* noCol.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907F11DC4AA0700702715 /* Nrefresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907EF1DC4AA0700702715 /* Nrefresh.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907F21DC4AA0700702715 /* Ncollec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907F01DC4AA0700702715 /* Ncollec.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907F51DC4B8EB00702715 /* poe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907F31DC4B8EB00702715 /* poe1.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907F61DC4B8EB00702715 /* poe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907F41DC4B8EB00702715 /* poe2.png */; settings = {ASSET_TAGS = (); }; };
+		3FF907F81DC4B97800702715 /* poe.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF907F71DC4B97800702715 /* poe.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +80,6 @@
 /* Begin PBXFileReference section */
 		3F1C04421DC3540E003B8A65 /* collec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collec.png; sourceTree = "<group>"; };
 		3F1C04461DC355D0003B8A65 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
-		3F1C04481DC357A4003B8A65 /* nocollec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocollec.png; sourceTree = "<group>"; };
-		3F1C04491DC357A4003B8A65 /* colleced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colleced.png; sourceTree = "<group>"; };
 		3F1C044C1DC36C80003B8A65 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		3F7CC4321DC206A30041605C /* Soulscour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulscour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +95,6 @@
 		3F7CC4501DC206A30041605C /* SoulscourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulscourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7CC4541DC206A30041605C /* SoulscourUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoulscourUITests.m; sourceTree = "<group>"; };
 		3F7CC4561DC206A30041605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F7CC4631DC21E4C0041605C /* 未收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未收藏.png"; sourceTree = "<group>"; };
-		3F7CC4641DC21E4C0041605C /* 已收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已收藏.png"; sourceTree = "<group>"; };
 		3F7CC4661DC21E4C0041605C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		3F7CC4671DC21E4C0041605C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		3F7CC4681DC21E4C0041605C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -161,6 +160,13 @@
 		3FB940A71DC380E300157FEC /* 书本2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "书本2.png"; path = "CHCardView/书本2.png"; sourceTree = "<group>"; };
 		3FB940AA1DC380ED00157FEC /* BeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaViewController.h; sourceTree = "<group>"; };
 		3FB940AB1DC380ED00157FEC /* BeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaViewController.m; sourceTree = "<group>"; };
+		3FF907EB1DC4924E00702715 /* coled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coled.png; sourceTree = "<group>"; };
+		3FF907EC1DC4924E00702715 /* noCol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noCol.png; sourceTree = "<group>"; };
+		3FF907EF1DC4AA0700702715 /* Nrefresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nrefresh.png; sourceTree = "<group>"; };
+		3FF907F01DC4AA0700702715 /* Ncollec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ncollec.png; sourceTree = "<group>"; };
+		3FF907F31DC4B8EB00702715 /* poe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poe1.png; sourceTree = "<group>"; };
+		3FF907F41DC4B8EB00702715 /* poe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poe2.png; sourceTree = "<group>"; };
+		3FF907F71DC4B97800702715 /* poe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,14 +261,17 @@
 		3F7CC4621DC21E2E0041605C /* Poe */ = {
 			isa = PBXGroup;
 			children = (
+				3FF907F71DC4B97800702715 /* poe.png */,
+				3FF907F31DC4B8EB00702715 /* poe1.png */,
+				3FF907F41DC4B8EB00702715 /* poe2.png */,
+				3FF907EB1DC4924E00702715 /* coled.png */,
+				3FF907EC1DC4924E00702715 /* noCol.png */,
 				3F1C044C1DC36C80003B8A65 /* CollectionViewController.h */,
 				3F1C044D1DC36C80003B8A65 /* CollectionViewController.m */,
+				3FF907EF1DC4AA0700702715 /* Nrefresh.png */,
+				3FF907F01DC4AA0700702715 /* Ncollec.png */,
 				3F1C04461DC355D0003B8A65 /* refresh.png */,
 				3F1C04421DC3540E003B8A65 /* collec.png */,
-				3F1C04481DC357A4003B8A65 /* nocollec.png */,
-				3F1C04491DC357A4003B8A65 /* colleced.png */,
-				3F7CC4631DC21E4C0041605C /* 未收藏.png */,
-				3F7CC4641DC21E4C0041605C /* 已收藏.png */,
 				3F7CC4651DC21E4C0041605C /* fmdb */,
 				3F7CC4711DC21E4C0041605C /* PoeModel.h */,
 				3F7CC4721DC21E4C0041605C /* PoeModel.m */,
@@ -485,17 +494,20 @@
 			files = (
 				3F7CC4821DC21E4C0041605C /* PoeViewController.xib in Resources */,
 				3F7CC4891DC221C70041605C /* OtherViewController.xib in Resources */,
-				3F1C044B1DC357A4003B8A65 /* colleced.png in Resources */,
-				3F7CC4781DC21E4C0041605C /* 未收藏.png in Resources */,
-				3F7CC4791DC21E4C0041605C /* 已收藏.png in Resources */,
+				3FF907ED1DC4924E00702715 /* coled.png in Resources */,
 				3FB940A91DC380E300157FEC /* 书本2.png in Resources */,
 				3FB940961DC380D800157FEC /* LICENSE in Resources */,
 				3F7CC43C1DC206A30041605C /* Assets.xcassets in Resources */,
 				3F1C04471DC355D0003B8A65 /* refresh.png in Resources */,
+				3FF907EE1DC4924E00702715 /* noCol.png in Resources */,
+				3FF907F51DC4B8EB00702715 /* poe1.png in Resources */,
+				3FF907F11DC4AA0700702715 /* Nrefresh.png in Resources */,
 				3F7CC43F1DC206A30041605C /* LaunchScreen.storyboard in Resources */,
+				3FF907F61DC4B8EB00702715 /* poe2.png in Resources */,
 				3F1C04431DC3540E003B8A65 /* collec.png in Resources */,
-				3F1C044A1DC357A4003B8A65 /* nocollec.png in Resources */,
 				3FB940A81DC380E300157FEC /* 书本.png in Resources */,
+				3FF907F81DC4B97800702715 /* poe.png in Resources */,
+				3FF907F21DC4AA0700702715 /* Ncollec.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
